@@ -1,5 +1,5 @@
 # Password Generator
- Generates Strong Random Password.
+ Generates Strong ( Random | Logical ) Password
 
 ### Supports Platform: Cross Platform
 
@@ -22,9 +22,15 @@
 **Note:** On *macOS*, before running the file, you might need to run `chmod 755 generate_password` to make it *executable*.
 
 ### Available Arguments:
- - **-h or --help:** *Displays all the available options.*
- - **-c or --copy:** *Optional. Specifying this option will copy the generated password to clipboard.*
- - **-l or --length:** *Optional. This option can be used to specify the length of the password. If this option is not used default length will be 12.*
+ - Program is divided into two parts:
+   - **strong:** *Generates strong random password.* **Usage:** `generate_password strong -h`
+      - **-l or --length:** *Optional. This option can be used to specify the length of the password.
+        If this option is not used default length will be 12.*
+   - **logical:** *Generates password on basis of questions you answered.* **Usage:** `generate_password logical -h`
+      - **-q or --ques-number:** *Optional. This option can be used to specify number of questions you want to answer.
+        Maximum is 4. If this options is not used default is random between 2 or 3.*
+- **-h or --help:** *Displays all the available options.*    
+- **-c or --copy:** *Optional. Specifying this option will copy the generated password to clipboard.*
 
 ### Color Significance:
  - **Green:** Successful.
