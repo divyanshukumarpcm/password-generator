@@ -1,5 +1,5 @@
 # Password Generator
- Generates Strong ( Random | Logical ) Password
+ Generates Strong ( Random | Logical ) Password.
 
 ### Supports Platform: Cross Platform
 
@@ -42,7 +42,7 @@
 
 ### Developer Information:
 - **Website:** https://www.hackhunt.in/
-- **Contact:** hh.hackunt@gmail.com
+- **Contact:** info@hackhunt.in
 - **LinkedIn:** https://www.linkedin.com/company/hackhunt
 - **Youtube:** [@hackhunt](https://youtube.com/hackhunt)
 - **Instagram:** [@hh.hackhunt](https://www.instagram.com/hh.hackhunt/)

@@ -3,6 +3,7 @@
 import argparse
 import random
 from pyperclip import copy
+from leet import changer
 
 
 def generate_strong_password(pass_length):
@@ -34,7 +35,16 @@ def generate_logical_password(ans_list):
         ans_list.pop(y)
         words.pop(x)
 
-    return password
+    leet_data = changer(password)
+
+    print("[+] Password (without special characters) -> {0}.".format(password))
+
+    if isinstance(leet_data[0], int):
+        print("[*] {0} is changed to {1}.".format(password[leet_data[0]], leet_data[2]))
+        return leet_data[1]
+    else:
+        print("[*] and is changed to @.")
+        return leet_data
 
 
 def selector(length):
@@ -82,6 +92,10 @@ def selector(length):
 
         if answer.isalpha():
             answer = answer.capitalize()
+
+        if " " in answer:
+            answer = answer.replace(" ", "_")
+
         ans_list.append(answer)
 
         length = length - 1
@@ -92,7 +106,7 @@ def selector(length):
 def get_arguments():
     parser = argparse.ArgumentParser(prog="Password Generator",
                                      formatter_class=argparse.RawDescriptionHelpFormatter,
-                                     description=""">>> | Password Generator v2.0 by Hack Hunt | <<<
+                                     description=""">>> | Password Generator v2.1 by Hack Hunt | <<<
     ----------------------------------------""")
 
     parser._optionals.title = "Optional Arguments"
